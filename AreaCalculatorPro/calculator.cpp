@@ -1,6 +1,7 @@
 #include "calculator.h"
 #include "ui_calculator.h"
 #include <cmath>
+#include <QMessageBox>
 
 extern int graphicsFlag=1;
 extern int unitFlag=1;
@@ -17,6 +18,7 @@ Calculator::Calculator(QWidget *parent)
     connect(ui->calculator,&QPushButton::clicked,this,[=](){calculator();});
     connect(ui->cm,&QAction::triggered,this,[=](){unitFlag=1;ui->cm->setText("厘米(当前)");ui->inches->setText("英寸");});
     connect(ui->inches,&QAction::triggered,this,[=](){unitFlag=2;ui->cm->setText("厘米");ui->inches->setText("英寸(当前)");});
+    connect(ui->information,&QAction::triggered,this,[=](){QMessageBox::information(this,"info","输出结果均以平方厘米为单位");});
 }
 
 void Calculator::squareShow()
