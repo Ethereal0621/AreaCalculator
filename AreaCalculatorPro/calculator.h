@@ -17,6 +17,7 @@ public:
     void circleShow();
     void rectangleShow();
     void triangleShow();
+    void parallelogramShow();
     void hide();
     void calculator();
     ~Calculator();

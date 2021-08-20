@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>293</width>
-    <height>466</height>
+    <width>746</width>
+    <height>747</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -272,8 +272,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>293</width>
-     <height>22</height>
+     <width>746</width>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="graphics">
@@ -287,6 +287,8 @@
     <addaction name="rectangle"/>
     <addaction name="separator"/>
     <addaction name="triangle"/>
+    <addaction name="separator"/>
+    <addaction name="parallelogram"/>
    </widget>
    <widget class="QMenu" name="unit">
     <property name="title">
@@ -345,6 +347,11 @@
   <action name="information">
    <property name="text">
     <string>信息</string>
+   </property>
+  </action>
+  <action name="parallelogram">
+   <property name="text">
+    <string>平行四边形</string>
    </property>
   </action>
  </widget>
