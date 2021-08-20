@@ -10,6 +10,7 @@
 #define UI_CALCULATOR_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
@@ -64,7 +65,7 @@ public:
     {
         if (Calculator->objectName().isEmpty())
             Calculator->setObjectName(QString::fromUtf8("Calculator"));
-        Calculator->resize(293, 401);
+        Calculator->resize(293, 466);
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -72,6 +73,9 @@ public:
         Calculator->setSizePolicy(sizePolicy);
         Calculator->setMinimumSize(QSize(0, 0));
         Calculator->setMaximumSize(QSize(10000, 10000));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8("../../../calculate.png"), QSize(), QIcon::Normal, QIcon::Off);
+        Calculator->setWindowIcon(icon);
         square = new QAction(Calculator);
         square->setObjectName(QString::fromUtf8("square"));
         actioncfx = new QAction(Calculator);

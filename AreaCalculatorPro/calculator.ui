@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>293</width>
-    <height>401</height>
+    <height>466</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -30,6 +30,10 @@
   </property>
   <property name="windowTitle">
    <string>通用面积计算器</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../../calculate.png</normaloff>../../../calculate.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
