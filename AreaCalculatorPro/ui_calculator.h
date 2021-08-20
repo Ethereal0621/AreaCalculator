@@ -35,10 +35,12 @@ public:
     QAction *circle;
     QAction *rectangle;
     QAction *triangle;
-    QAction *cm;
-    QAction *inches;
+    QAction *icm;
+    QAction *iinches;
     QAction *information;
     QAction *parallelogram;
+    QAction *ocm;
+    QAction *oinches;
     QWidget *centralwidget;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
@@ -58,8 +60,9 @@ public:
     QSpacerItem *horizontalSpacer_2;
     QMenuBar *menubar;
     QMenu *graphics;
-    QMenu *unit;
+    QMenu *inputunit;
     QMenu *menu;
+    QMenu *outputunit;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *Calculator)
@@ -87,14 +90,18 @@ public:
         rectangle->setObjectName(QString::fromUtf8("rectangle"));
         triangle = new QAction(Calculator);
         triangle->setObjectName(QString::fromUtf8("triangle"));
-        cm = new QAction(Calculator);
-        cm->setObjectName(QString::fromUtf8("cm"));
-        inches = new QAction(Calculator);
-        inches->setObjectName(QString::fromUtf8("inches"));
+        icm = new QAction(Calculator);
+        icm->setObjectName(QString::fromUtf8("icm"));
+        iinches = new QAction(Calculator);
+        iinches->setObjectName(QString::fromUtf8("iinches"));
         information = new QAction(Calculator);
         information->setObjectName(QString::fromUtf8("information"));
         parallelogram = new QAction(Calculator);
         parallelogram->setObjectName(QString::fromUtf8("parallelogram"));
+        ocm = new QAction(Calculator);
+        ocm->setObjectName(QString::fromUtf8("ocm"));
+        oinches = new QAction(Calculator);
+        oinches->setObjectName(QString::fromUtf8("oinches"));
         centralwidget = new QWidget(Calculator);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         horizontalLayout = new QHBoxLayout(centralwidget);
@@ -195,17 +202,20 @@ public:
         menubar->setGeometry(QRect(0, 0, 746, 26));
         graphics = new QMenu(menubar);
         graphics->setObjectName(QString::fromUtf8("graphics"));
-        unit = new QMenu(menubar);
-        unit->setObjectName(QString::fromUtf8("unit"));
+        inputunit = new QMenu(menubar);
+        inputunit->setObjectName(QString::fromUtf8("inputunit"));
         menu = new QMenu(menubar);
         menu->setObjectName(QString::fromUtf8("menu"));
+        outputunit = new QMenu(menubar);
+        outputunit->setObjectName(QString::fromUtf8("outputunit"));
         Calculator->setMenuBar(menubar);
         statusbar = new QStatusBar(Calculator);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         Calculator->setStatusBar(statusbar);
 
         menubar->addAction(graphics->menuAction());
-        menubar->addAction(unit->menuAction());
+        menubar->addAction(inputunit->menuAction());
+        menubar->addAction(outputunit->menuAction());
         menubar->addAction(menu->menuAction());
         graphics->addAction(square);
         graphics->addSeparator();
@@ -216,10 +226,13 @@ public:
         graphics->addAction(triangle);
         graphics->addSeparator();
         graphics->addAction(parallelogram);
-        unit->addAction(cm);
-        unit->addSeparator();
-        unit->addAction(inches);
+        inputunit->addAction(icm);
+        inputunit->addSeparator();
+        inputunit->addAction(iinches);
         menu->addAction(information);
+        outputunit->addAction(ocm);
+        outputunit->addSeparator();
+        outputunit->addAction(oinches);
 
         retranslateUi(Calculator);
 
@@ -234,18 +247,21 @@ public:
         circle->setText(QCoreApplication::translate("Calculator", "\345\234\206\345\275\242", nullptr));
         rectangle->setText(QCoreApplication::translate("Calculator", "\351\225\277\346\226\271\345\275\242", nullptr));
         triangle->setText(QCoreApplication::translate("Calculator", "\344\270\211\350\247\222\345\275\242", nullptr));
-        cm->setText(QCoreApplication::translate("Calculator", "\345\216\230\347\261\263\357\274\210\351\273\230\350\256\244\357\274\211", nullptr));
-        inches->setText(QCoreApplication::translate("Calculator", "\350\213\261\345\257\270", nullptr));
+        icm->setText(QCoreApplication::translate("Calculator", "\345\216\230\347\261\263(\345\275\223\345\211\215\357\274\211", nullptr));
+        iinches->setText(QCoreApplication::translate("Calculator", "\350\213\261\345\257\270", nullptr));
         information->setText(QCoreApplication::translate("Calculator", "\344\277\241\346\201\257", nullptr));
         parallelogram->setText(QCoreApplication::translate("Calculator", "\345\271\263\350\241\214\345\233\233\350\276\271\345\275\242", nullptr));
+        ocm->setText(QCoreApplication::translate("Calculator", "\345\216\230\347\261\263(\345\275\223\345\211\215\357\274\211", nullptr));
+        oinches->setText(QCoreApplication::translate("Calculator", "\350\213\261\345\257\270", nullptr));
         label->setText(QCoreApplication::translate("Calculator", "\346\255\243\346\226\271\345\275\242", nullptr));
         value1->setPlaceholderText(QString());
         result->setText(QString());
         result->setPlaceholderText(QCoreApplication::translate("Calculator", "\346\255\244\345\244\204\350\276\223\345\207\272\347\273\223\346\236\234\357\274\210cm^2)", nullptr));
         calculator->setText(QCoreApplication::translate("Calculator", "\350\256\241\347\256\227", nullptr));
         graphics->setTitle(QCoreApplication::translate("Calculator", "\345\233\276\345\275\242", nullptr));
-        unit->setTitle(QCoreApplication::translate("Calculator", "\345\215\225\344\275\215", nullptr));
+        inputunit->setTitle(QCoreApplication::translate("Calculator", "\350\276\223\345\205\245\345\215\225\344\275\215", nullptr));
         menu->setTitle(QCoreApplication::translate("Calculator", "\345\205\263\344\272\216", nullptr));
+        outputunit->setTitle(QCoreApplication::translate("Calculator", "\350\276\223\345\207\272\345\215\225\344\275\215", nullptr));
     } // retranslateUi
 
 };

@@ -290,13 +290,13 @@
     <addaction name="separator"/>
     <addaction name="parallelogram"/>
    </widget>
-   <widget class="QMenu" name="unit">
+   <widget class="QMenu" name="inputunit">
     <property name="title">
-     <string>单位</string>
+     <string>输入单位</string>
     </property>
-    <addaction name="cm"/>
+    <addaction name="icm"/>
     <addaction name="separator"/>
-    <addaction name="inches"/>
+    <addaction name="iinches"/>
    </widget>
    <widget class="QMenu" name="menu">
     <property name="title">
@@ -304,8 +304,17 @@
     </property>
     <addaction name="information"/>
    </widget>
+   <widget class="QMenu" name="outputunit">
+    <property name="title">
+     <string>输出单位</string>
+    </property>
+    <addaction name="ocm"/>
+    <addaction name="separator"/>
+    <addaction name="oinches"/>
+   </widget>
    <addaction name="graphics"/>
-   <addaction name="unit"/>
+   <addaction name="inputunit"/>
+   <addaction name="outputunit"/>
    <addaction name="menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
@@ -334,12 +343,12 @@
     <string>三角形</string>
    </property>
   </action>
-  <action name="cm">
+  <action name="icm">
    <property name="text">
-    <string>厘米（默认）</string>
+    <string>厘米(当前）</string>
    </property>
   </action>
-  <action name="inches">
+  <action name="iinches">
    <property name="text">
     <string>英寸</string>
    </property>
@@ -352,6 +361,16 @@
   <action name="parallelogram">
    <property name="text">
     <string>平行四边形</string>
+   </property>
+  </action>
+  <action name="ocm">
+   <property name="text">
+    <string>厘米(当前）</string>
+   </property>
+  </action>
+  <action name="oinches">
+   <property name="text">
+    <string>英寸</string>
    </property>
   </action>
  </widget>
