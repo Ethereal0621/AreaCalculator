@@ -41,6 +41,9 @@ public:
     QAction *parallelogram;
     QAction *ocm;
     QAction *oinches;
+    QAction *version;
+    QAction *term;
+    QAction *state;
     QWidget *centralwidget;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
@@ -69,7 +72,7 @@ public:
     {
         if (Calculator->objectName().isEmpty())
             Calculator->setObjectName(QString::fromUtf8("Calculator"));
-        Calculator->resize(746, 747);
+        Calculator->resize(296, 488);
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -102,6 +105,12 @@ public:
         ocm->setObjectName(QString::fromUtf8("ocm"));
         oinches = new QAction(Calculator);
         oinches->setObjectName(QString::fromUtf8("oinches"));
+        version = new QAction(Calculator);
+        version->setObjectName(QString::fromUtf8("version"));
+        term = new QAction(Calculator);
+        term->setObjectName(QString::fromUtf8("term"));
+        state = new QAction(Calculator);
+        state->setObjectName(QString::fromUtf8("state"));
         centralwidget = new QWidget(Calculator);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         horizontalLayout = new QHBoxLayout(centralwidget);
@@ -199,7 +208,7 @@ public:
         Calculator->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Calculator);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 746, 26));
+        menubar->setGeometry(QRect(0, 0, 296, 22));
         graphics = new QMenu(menubar);
         graphics->setObjectName(QString::fromUtf8("graphics"));
         inputunit = new QMenu(menubar);
@@ -230,6 +239,12 @@ public:
         inputunit->addSeparator();
         inputunit->addAction(iinches);
         menu->addAction(information);
+        menu->addSeparator();
+        menu->addAction(version);
+        menu->addSeparator();
+        menu->addAction(term);
+        menu->addSeparator();
+        menu->addAction(state);
         outputunit->addAction(ocm);
         outputunit->addSeparator();
         outputunit->addAction(oinches);
@@ -253,6 +268,9 @@ public:
         parallelogram->setText(QCoreApplication::translate("Calculator", "\345\271\263\350\241\214\345\233\233\350\276\271\345\275\242", nullptr));
         ocm->setText(QCoreApplication::translate("Calculator", "\345\216\230\347\261\263(\345\275\223\345\211\215\357\274\211", nullptr));
         oinches->setText(QCoreApplication::translate("Calculator", "\350\213\261\345\257\270", nullptr));
+        version->setText(QCoreApplication::translate("Calculator", "\347\211\210\346\234\254", nullptr));
+        term->setText(QCoreApplication::translate("Calculator", "\345\233\242\351\230\237", nullptr));
+        state->setText(QCoreApplication::translate("Calculator", "\350\257\264\346\230\216", nullptr));
         label->setText(QCoreApplication::translate("Calculator", "\346\255\243\346\226\271\345\275\242", nullptr));
         value1->setPlaceholderText(QString());
         result->setText(QString());

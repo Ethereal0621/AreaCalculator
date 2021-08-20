@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>746</width>
-    <height>747</height>
+    <width>296</width>
+    <height>488</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -272,8 +272,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>746</width>
-     <height>26</height>
+     <width>296</width>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="graphics">
@@ -303,6 +303,12 @@
      <string>关于</string>
     </property>
     <addaction name="information"/>
+    <addaction name="separator"/>
+    <addaction name="version"/>
+    <addaction name="separator"/>
+    <addaction name="term"/>
+    <addaction name="separator"/>
+    <addaction name="state"/>
    </widget>
    <widget class="QMenu" name="outputunit">
     <property name="title">
@@ -371,6 +377,21 @@
   <action name="oinches">
    <property name="text">
     <string>英寸</string>
+   </property>
+  </action>
+  <action name="version">
+   <property name="text">
+    <string>版本</string>
+   </property>
+  </action>
+  <action name="term">
+   <property name="text">
+    <string>团队</string>
+   </property>
+  </action>
+  <action name="state">
+   <property name="text">
+    <string>说明</string>
    </property>
   </action>
  </widget>
