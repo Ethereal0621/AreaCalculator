@@ -74,7 +74,7 @@ public:
         Calculator->setMinimumSize(QSize(0, 0));
         Calculator->setMaximumSize(QSize(10000, 10000));
         QIcon icon;
-        icon.addFile(QString::fromUtf8("../../../calculate.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QString::fromUtf8("calculator.ico"), QSize(), QIcon::Normal, QIcon::Off);
         Calculator->setWindowIcon(icon);
         square = new QAction(Calculator);
         square->setObjectName(QString::fromUtf8("square"));

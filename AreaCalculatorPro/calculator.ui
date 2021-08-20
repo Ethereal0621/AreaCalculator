@@ -33,7 +33,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../../../calculate.png</normaloff>../../../calculate.png</iconset>
+    <normaloff>calculator.ico</normaloff>calculator.ico</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
