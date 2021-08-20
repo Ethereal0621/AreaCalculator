@@ -23,10 +23,10 @@ Calculator::Calculator(QWidget *parent)
     connect(ui->iinches,&QAction::triggered,this,[=](){inputUnitFlag=2;ui->icm->setText("厘米");ui->iinches->setText("英寸(当前)");});
     connect(ui->ocm,&QAction::triggered,this,[=](){outputUnitFlag=1;ui->ocm->setText("厘米(当前)");ui->oinches->setText("英寸");ui->result->setPlaceholderText("此处输出结果(cm^2)");});
     connect(ui->oinches,&QAction::triggered,this,[=](){outputUnitFlag=2;ui->ocm->setText("厘米");ui->oinches->setText("英寸(当前)");ui->result->setPlaceholderText("此处输出结果(inches^2)");});
-    connect(ui->information,&QAction::triggered,this,[=](){QMessageBox::information(this,"info","这里什么都没有噢？！");});
-
-
-
+    connect(ui->information,&QAction::triggered,this,[=](){QMessageBox::about(this,"信息","这里什么都没有噢？！");});
+    connect(ui->term,&QAction::triggered,this,[=](){QMessageBox::about(this,"团队","所以爱会消失对不队");});
+    connect(ui->version,&QAction::triggered,this,[=](){QMessageBox::about(this,"版本","v1.0");});
+    connect(ui->state,&QAction::triggered,this,[=](){QMessageBox::about(this,"说明","输入输出单位可不统一");});
 }
 
 void Calculator::squareShow()
