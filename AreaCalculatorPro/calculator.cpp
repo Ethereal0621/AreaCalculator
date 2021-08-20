@@ -21,8 +21,8 @@ Calculator::Calculator(QWidget *parent)
     connect(ui->calculator,&QPushButton::clicked,this,[=](){calculator();});
     connect(ui->icm,&QAction::triggered,this,[=](){inputUnitFlag=1;ui->icm->setText("厘米(当前)");ui->iinches->setText("英寸");});
     connect(ui->iinches,&QAction::triggered,this,[=](){inputUnitFlag=2;ui->icm->setText("厘米");ui->iinches->setText("英寸(当前)");});
-    connect(ui->ocm,&QAction::triggered,this,[=](){outputUnitFlag=1;ui->icm->setText("厘米(当前)");ui->iinches->setText("英寸");ui->result->setPlaceholderText("此处输出结果(cm^2)");});
-    connect(ui->oinches,&QAction::triggered,this,[=](){outputUnitFlag=2;ui->icm->setText("厘米");ui->iinches->setText("英寸(当前)");ui->result->setPlaceholderText("此处输出结果(inches^2)");});
+    connect(ui->ocm,&QAction::triggered,this,[=](){outputUnitFlag=1;ui->ocm->setText("厘米(当前)");ui->oinches->setText("英寸");ui->result->setPlaceholderText("此处输出结果(cm^2)");});
+    connect(ui->oinches,&QAction::triggered,this,[=](){outputUnitFlag=2;ui->ocm->setText("厘米");ui->oinches->setText("英寸(当前)");ui->result->setPlaceholderText("此处输出结果(inches^2)");});
     connect(ui->information,&QAction::triggered,this,[=](){QMessageBox::information(this,"info","输出结果均以平方厘米为单位");});
 }
 
