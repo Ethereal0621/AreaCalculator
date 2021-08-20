@@ -44,6 +44,7 @@ public:
     QAction *version;
     QAction *term;
     QAction *state;
+    QAction *ellipse;
     QWidget *centralwidget;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
@@ -72,7 +73,7 @@ public:
     {
         if (Calculator->objectName().isEmpty())
             Calculator->setObjectName(QString::fromUtf8("Calculator"));
-        Calculator->resize(296, 488);
+        Calculator->resize(296, 509);
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -111,6 +112,8 @@ public:
         term->setObjectName(QString::fromUtf8("term"));
         state = new QAction(Calculator);
         state->setObjectName(QString::fromUtf8("state"));
+        ellipse = new QAction(Calculator);
+        ellipse->setObjectName(QString::fromUtf8("ellipse"));
         centralwidget = new QWidget(Calculator);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         horizontalLayout = new QHBoxLayout(centralwidget);
@@ -208,7 +211,7 @@ public:
         Calculator->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Calculator);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 296, 22));
+        menubar->setGeometry(QRect(0, 0, 296, 26));
         graphics = new QMenu(menubar);
         graphics->setObjectName(QString::fromUtf8("graphics"));
         inputunit = new QMenu(menubar);
@@ -229,6 +232,8 @@ public:
         graphics->addAction(square);
         graphics->addSeparator();
         graphics->addAction(circle);
+        graphics->addSeparator();
+        graphics->addAction(ellipse);
         graphics->addSeparator();
         graphics->addAction(rectangle);
         graphics->addSeparator();
@@ -271,6 +276,7 @@ public:
         version->setText(QCoreApplication::translate("Calculator", "\347\211\210\346\234\254", nullptr));
         term->setText(QCoreApplication::translate("Calculator", "\345\233\242\351\230\237", nullptr));
         state->setText(QCoreApplication::translate("Calculator", "\350\257\264\346\230\216", nullptr));
+        ellipse->setText(QCoreApplication::translate("Calculator", "\346\244\255\345\234\206", nullptr));
         label->setText(QCoreApplication::translate("Calculator", "\346\255\243\346\226\271\345\275\242", nullptr));
         value1->setPlaceholderText(QString());
         result->setText(QString());

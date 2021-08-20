@@ -18,6 +18,7 @@ Calculator::Calculator(QWidget *parent)
     connect(ui->rectangle,&QAction::triggered,this,[=](){hide();rectangleShow();graphicsFlag=3;});
     connect(ui->triangle,&QAction::triggered,this,[=](){hide();triangleShow();graphicsFlag=4;});
     connect(ui->parallelogram,&QAction::triggered,this,[=](){hide();parallelogramShow();graphicsFlag=5;});
+    connect(ui->ellipse,&QAction::triggered,this,[=](){hide();ellipseShow();graphicsFlag=6;});
     connect(ui->calculator,&QPushButton::clicked,this,[=](){calculator();});
     connect(ui->icm,&QAction::triggered,this,[=](){inputUnitFlag=1;ui->icm->setText("厘米(当前)");ui->iinches->setText("英寸");});
     connect(ui->iinches,&QAction::triggered,this,[=](){inputUnitFlag=2;ui->icm->setText("厘米");ui->iinches->setText("英寸(当前)");});
@@ -114,6 +115,23 @@ void Calculator::parallelogramShow()
     ui->calculator->show();
 }
 
+void Calculator::ellipseShow()
+{
+    ui->label->setText("椭圆");
+    ui->label->show();
+    ui->value1->setPlaceholderText("此处输入短轴");
+    ui->value1->show();
+    ui->value2->setPlaceholderText("此处输入长轴");
+    ui->value2->setEnabled(true);
+    ui->value2->show();
+    if(outputUnitFlag==1)
+        ui->result->setPlaceholderText("此处输出结果(cm^2)");
+    else if(outputUnitFlag==2)
+        ui->result->setPlaceholderText("此处输出结果(inches^2)");
+    ui->result->show();
+    ui->calculator->show();
+}
+
 void Calculator::hide()
 {
     ui->label->hide();
@@ -198,6 +216,21 @@ void Calculator::calculator()
             ui->result->setText(QString::number(vvalue1*vvalue2/2.54/2.54,'f',3));
         else if(inputUnitFlag==2&&outputUnitFlag==2)
             ui->result->setText(QString::number(vvalue1*vvalue2,'f',3));
+    }
+    else if(graphicsFlag==6)
+    {
+        QString str1=ui->value1->text();
+        double vvalue1=str1.toDouble();
+        QString str2=ui->value2->text();
+        double vvalue2=str2.toDouble();
+        if(inputUnitFlag==1&&outputUnitFlag==1)
+            ui->result->setText(QString::number(3.1415926535*vvalue1*vvalue2,'f',3));
+        else if(inputUnitFlag==2&&outputUnitFlag==1)
+            ui->result->setText(QString::number(3.1415926535*2.54*2.54*vvalue1*vvalue2,'f',3));
+        else if(inputUnitFlag==1&&outputUnitFlag==2)
+            ui->result->setText(QString::number(3.1415926535*vvalue1*vvalue2/2.54/2.54,'f',3));
+        else if(inputUnitFlag==2&&outputUnitFlag==2)
+            ui->result->setText(QString::number(3.1415926535*vvalue1*vvalue2,'f',3));
     }
 }
 

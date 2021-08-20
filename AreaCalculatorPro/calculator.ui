@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>296</width>
-    <height>488</height>
+    <height>509</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -273,7 +273,7 @@
      <x>0</x>
      <y>0</y>
      <width>296</width>
-     <height>22</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="graphics">
@@ -283,6 +283,8 @@
     <addaction name="square"/>
     <addaction name="separator"/>
     <addaction name="circle"/>
+    <addaction name="separator"/>
+    <addaction name="ellipse"/>
     <addaction name="separator"/>
     <addaction name="rectangle"/>
     <addaction name="separator"/>
@@ -392,6 +394,11 @@
   <action name="state">
    <property name="text">
     <string>说明</string>
+   </property>
+  </action>
+  <action name="ellipse">
+   <property name="text">
+    <string>椭圆</string>
    </property>
   </action>
  </widget>

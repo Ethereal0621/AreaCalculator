@@ -15,6 +15,7 @@ public:
     Calculator(QWidget *parent = nullptr);
     void squareShow();
     void circleShow();
+    void ellipseShow();
     void rectangleShow();
     void triangleShow();
     void parallelogramShow();
