@@ -211,7 +211,7 @@ public:
         Calculator->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Calculator);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 296, 26));
+        menubar->setGeometry(QRect(0, 0, 296, 22));
         graphics = new QMenu(menubar);
         graphics->setObjectName(QString::fromUtf8("graphics"));
         inputunit = new QMenu(menubar);
@@ -267,11 +267,11 @@ public:
         circle->setText(QCoreApplication::translate("Calculator", "\345\234\206\345\275\242", nullptr));
         rectangle->setText(QCoreApplication::translate("Calculator", "\351\225\277\346\226\271\345\275\242", nullptr));
         triangle->setText(QCoreApplication::translate("Calculator", "\344\270\211\350\247\222\345\275\242", nullptr));
-        icm->setText(QCoreApplication::translate("Calculator", "\345\216\230\347\261\263(\345\275\223\345\211\215\357\274\211", nullptr));
+        icm->setText(QCoreApplication::translate("Calculator", "\345\216\230\347\261\263\342\210\232", nullptr));
         iinches->setText(QCoreApplication::translate("Calculator", "\350\213\261\345\257\270", nullptr));
         information->setText(QCoreApplication::translate("Calculator", "\344\277\241\346\201\257", nullptr));
         parallelogram->setText(QCoreApplication::translate("Calculator", "\345\271\263\350\241\214\345\233\233\350\276\271\345\275\242", nullptr));
-        ocm->setText(QCoreApplication::translate("Calculator", "\345\216\230\347\261\263(\345\275\223\345\211\215\357\274\211", nullptr));
+        ocm->setText(QCoreApplication::translate("Calculator", "\345\216\230\347\261\263\342\210\232", nullptr));
         oinches->setText(QCoreApplication::translate("Calculator", "\350\213\261\345\257\270", nullptr));
         version->setText(QCoreApplication::translate("Calculator", "\347\211\210\346\234\254", nullptr));
         term->setText(QCoreApplication::translate("Calculator", "\345\233\242\351\230\237", nullptr));
