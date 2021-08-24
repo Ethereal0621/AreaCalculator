@@ -20,10 +20,10 @@ Calculator::Calculator(QWidget *parent)
     connect(ui->parallelogram,&QAction::triggered,this,[=](){hide();parallelogramShow();graphicsFlag=5;});
     connect(ui->ellipse,&QAction::triggered,this,[=](){hide();ellipseShow();graphicsFlag=6;});
     connect(ui->calculator,&QPushButton::clicked,this,[=](){calculator();});
-    connect(ui->icm,&QAction::triggered,this,[=](){inputUnitFlag=1;ui->icm->setText("厘米(当前)");ui->iinches->setText("英寸");});
-    connect(ui->iinches,&QAction::triggered,this,[=](){inputUnitFlag=2;ui->icm->setText("厘米");ui->iinches->setText("英寸(当前)");});
-    connect(ui->ocm,&QAction::triggered,this,[=](){outputUnitFlag=1;ui->ocm->setText("厘米(当前)");ui->oinches->setText("英寸");ui->result->setPlaceholderText("此处输出结果(cm^2)");});
-    connect(ui->oinches,&QAction::triggered,this,[=](){outputUnitFlag=2;ui->ocm->setText("厘米");ui->oinches->setText("英寸(当前)");ui->result->setPlaceholderText("此处输出结果(inches^2)");});
+    connect(ui->icm,&QAction::triggered,this,[=](){inputUnitFlag=1;ui->icm->setText("厘米√");ui->iinches->setText("英寸");});
+    connect(ui->iinches,&QAction::triggered,this,[=](){inputUnitFlag=2;ui->icm->setText("厘米");ui->iinches->setText("英寸√");});
+    connect(ui->ocm,&QAction::triggered,this,[=](){outputUnitFlag=1;ui->ocm->setText("厘米√");ui->oinches->setText("英寸");ui->result->setPlaceholderText("图形面积(cm^2)");});
+    connect(ui->oinches,&QAction::triggered,this,[=](){outputUnitFlag=2;ui->ocm->setText("厘米");ui->oinches->setText("英寸√");ui->result->setPlaceholderText("图形面积(inches^2)");});
     connect(ui->information,&QAction::triggered,this,[=](){QMessageBox::about(this,"信息","这里什么都没有噢？！");});
     connect(ui->term,&QAction::triggered,this,[=](){QMessageBox::about(this,"团队","所以爱会消失对不队");});
     connect(ui->version,&QAction::triggered,this,[=](){QMessageBox::about(this,"版本","v1.0");});
@@ -40,9 +40,9 @@ void Calculator::squareShow()
     ui->value2->setEnabled(false);
     ui->value2->show();
     if(outputUnitFlag==1)
-        ui->result->setPlaceholderText("此处输出结果(cm^2)");
+        ui->result->setPlaceholderText("图形面积(cm^2)");
     else if(outputUnitFlag==2)
-        ui->result->setPlaceholderText("此处输出结果(inches^2)");
+        ui->result->setPlaceholderText("图形面积(inches^2)");
     ui->result->show();
     ui->calculator->show();
 }
@@ -57,9 +57,9 @@ void Calculator::circleShow()
     ui->value2->setEnabled(false);
     ui->value2->show();
     if(outputUnitFlag==1)
-        ui->result->setPlaceholderText("此处输出结果(cm^2)");
+        ui->result->setPlaceholderText("图形面积(cm^2)");
     else if(outputUnitFlag==2)
-        ui->result->setPlaceholderText("此处输出结果(inches^2)");
+        ui->result->setPlaceholderText("图形面积(inches^2)");
     ui->result->show();
     ui->calculator->show();
 }
@@ -74,9 +74,9 @@ void Calculator::rectangleShow()
     ui->value2->setEnabled(true);
     ui->value2->show();
     if(outputUnitFlag==1)
-        ui->result->setPlaceholderText("此处输出结果(cm^2)");
+        ui->result->setPlaceholderText("图形面积(cm^2)");
     else if(outputUnitFlag==2)
-        ui->result->setPlaceholderText("此处输出结果(inches^2)");
+        ui->result->setPlaceholderText("图形面积(inches^2)");
     ui->result->show();
     ui->calculator->show();
 }
@@ -91,9 +91,9 @@ void Calculator::triangleShow()
     ui->value2->setEnabled(true);
     ui->value2->show();
     if(outputUnitFlag==1)
-        ui->result->setPlaceholderText("此处输出结果(cm^2)");
+        ui->result->setPlaceholderText("图形面积(cm^2)");
     else if(outputUnitFlag==2)
-        ui->result->setPlaceholderText("此处输出结果(inches^2)");
+        ui->result->setPlaceholderText("图形面积(inches^2)");
     ui->result->show();
     ui->calculator->show();
 }
@@ -108,9 +108,9 @@ void Calculator::parallelogramShow()
     ui->value2->setEnabled(true);
     ui->value2->show();
     if(outputUnitFlag==1)
-        ui->result->setPlaceholderText("此处输出结果(cm^2)");
+        ui->result->setPlaceholderText("图形面积(cm^2)");
     else if(outputUnitFlag==2)
-        ui->result->setPlaceholderText("此处输出结果(inches^2)");
+        ui->result->setPlaceholderText("图形面积(inches^2)");
     ui->result->show();
     ui->calculator->show();
 }
@@ -125,9 +125,9 @@ void Calculator::ellipseShow()
     ui->value2->setEnabled(true);
     ui->value2->show();
     if(outputUnitFlag==1)
-        ui->result->setPlaceholderText("此处输出结果(cm^2)");
+        ui->result->setPlaceholderText("图形面积(cm^2)");
     else if(outputUnitFlag==2)
-        ui->result->setPlaceholderText("此处输出结果(inches^2)");
+        ui->result->setPlaceholderText("图形面积(inches^2)");
     ui->result->show();
     ui->calculator->show();
 }
